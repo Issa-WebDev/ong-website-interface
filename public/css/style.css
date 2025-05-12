@@ -1,0 +1,401 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    /* background-color: #EBE9E8; */
+    /* background-color: #ffffff; */
+    font-family: 'Quicksand';
+}
+
+/* ENTETE */
+header {
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+    background-color: #007BFF;
+}
+
+/* LOGO ENTETE */
+header div h1 a {
+    text-decoration: none;
+    color: #fff;
+    white-space: nowrap;
+}
+
+/* BARRE DE NAVIGATION */
+header nav {
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    align-items: center;
+}
+
+/* MENU ENTETE */
+header ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    gap: 20px;
+}
+
+header ul li a {
+    font-size: 0.9em;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.7s ease;
+    border-bottom: 2px solid #0c356100;
+}
+
+header ul li a:hover {
+    /* color: #0c3561; */
+    border-bottom: 2px solid #FFF;
+    /* text-decoration: underline; */
+}
+
+/* FORMULAIRE ENTETE */
+header form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header form input {
+    width: 200px;
+    padding: 7px;
+    border: none;
+    border-radius: 7px 0 0 7px;
+}
+
+header form button {
+    padding: 7px;
+    cursor: pointer;
+    transition: 0.7s;
+    background-color: #fff;
+    border-radius: 0 7px 7px 0;
+    border: none;
+    /* border: 1px solid #000; */
+}
+
+header form button i:hover {
+    color: #5e5e5e;
+    /* border: 1px solid #fff; */
+}
+
+/* CORPS DU SITE */
+main {
+    /* height: 83vh; */
+    padding-top: 60px;
+}
+
+/* SECTION */
+/* SECTION 1*/
+.section1 {
+    position: relative; /* Permet à ::before de fonctionner correctement */
+    padding: 170px;
+    background-size: cover;
+    background-image: url("/images/photo-1524069290683-0457abfe42c3.avif");
+    background-position: center;
+    background-attachment: fixed;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+}
+
+.section1::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Assombrit uniquement l'image */
+    z-index: 1; /* Met l’overlay au-dessus du fond */
+}
+
+.section1 h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    position: relative;
+    color: #FFC107;
+    z-index: 2; /* Met le texte au-dessus de l’overlay */
+}
+
+.section1 p {
+    position: relative;
+    color: #fff;
+    z-index: 2; /* Met le texte au-dessus de l’overlay */
+}
+
+/* SECTION 2*/
+.section2 {
+    padding: 40px;
+    text-align: center;
+}
+
+.section2 h2 {
+    font-size: 2.1em;
+    color: #DC3545;
+}
+
+.section2 .container h3 {
+    font-size: 1.9em;
+    color: #28A745;
+}
+.section2 .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.section2 .container div {
+    margin-top: 40px;
+    padding: 20px;
+    height: 100px;
+    display: flex;
+    gap: 10px;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #ccc;
+    transition: 0.7s;
+}
+
+.section2 .container div:hover {
+    border: 1px solid #000;
+}
+
+/* SECTION 3*/
+.section3 {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: #007BFF;
+    border-top: 1px solid #e7e7e7;
+}
+
+.section3 .div1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.section3 .div1 h2 {
+    color: #DC3545;
+    font-size: 2.2em;
+}
+
+.section3 .div1 p {
+    width: 270px;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+.section3 .div2 p {
+    color: #fff;
+    font-weight: bold;
+}
+
+.section4 {
+    text-align: center;
+    padding: 100px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.section4 .div1 {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.section4 .div1 h2 {
+    margin-top: 20px;
+    color: #DC3545;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.section4 .div1 div .force {
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.section4 .div1 div .force h4 {
+    /* color: #5a5a5a; */
+    margin-top: 20px;
+}
+
+.section4 .div1 div .force i {
+    color: #585858;
+    font-size: 2.3em;
+    transition: 0.4s;
+}
+
+.section4 .div1 div .force i:hover {
+    transform: scale(1.2);
+}
+
+.section4 .div2 {
+    text-align: center;
+    /* border: 1px solid #000; */
+}
+
+.section4 .div2 h4 {
+    font-size: 1.3em;
+    /* color: #FFC107; */
+    font-style: italic;
+}
+
+.section4 .div2 img {
+    /* object-fit: contain; */
+    height: 450px;
+    width: 110%;
+    border-radius: 30% 70% 37% 63% / 42% 30% 70% 58%;
+}
+
+/* PIEDS DE PAGE */
+footer {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+    color: #fff;
+    clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
+    /* padding: 50px; */
+    /* border: 1px solid #50686d; */
+}
+
+footer hr {
+    position: relative;
+    top: 15px;
+}
+
+footer .reseau {
+    position: relative;
+    top: 30px;
+    width: 100%;
+    /* padding-top: 20px; */
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* border: 1px solid red; */
+}
+
+footer .reseau div i {
+    font-size: 1.4em;
+    margin-left: 30px;
+    transition: 0.4s;
+}
+
+footer .reseau div i:hover {
+    color: #303030;
+}
+
+footer .container-footer {
+    /* position: relative;
+    top: 30px; */
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer .container-footer form {
+    padding: 20px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 1px solid #555555;
+    /* background-color: #131212; */
+    /* border-radius: 5px; */
+    /* border: 1px solid red; */
+}
+
+footer .container-footer form input {
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+}
+
+footer .container-footer form textarea {
+    height: 80px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+footer .container-footer form button {
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    color: #fff;
+    transition: 0.7s;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+}
+
+footer .container-footer form button:hover {
+    background-color: #0068d8;
+}
+
+footer .container-footer .div1 {
+    padding: 20px;
+    width: 350px;
+    /* border: 1px solid red; */
+}
+
+footer .container-footer .div1 h3 {
+    color: #FFC107;
+    margin-bottom: 10px;
+    /* white-space: nowrap; */
+}
+
+footer .container-footer .div1 span {
+    color: #28A745;
+}
+
+footer .container-footer .div2 ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer .container-footer .div2 h3 {
+    color: #FFC107;
+}
+
+footer .container-footer .div2 ul li a {
+    color: #e7e7e7;
+    transition: 0.7s;
+}
+
+footer .container-footer .div2 ul li a:hover {
+    color: #303030;
+}
